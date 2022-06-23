@@ -1,7 +1,8 @@
-let todoItems;
+// let todoItems : object[];
+let todoItems : any;
 
 // api
-function fetchTodoItems() {
+function fetchTodoItems() : Array<object>{
   const todos = [
     { id: 1, title: '안녕', done: false },
     { id: 2, title: '타입', done: false },
@@ -16,15 +17,15 @@ function fetchTodos() {
   return todos;
 }
 
-function addTodo(todo) {
+function addTodo(todo: object) : void{
   todoItems.push(todo);
 }
 
-function deleteTodo(index) {
+function deleteTodo(index: number) {
   todoItems.splice(index, 1);
 }
 
-function completeTodo(index, todo) {
+function completeTodo(index : number, todo : object) {
   todo.done = true;
   todoItems.splice(index, 1, todo);
 }
@@ -34,7 +35,7 @@ function logFirstTodo() {
   return todoItems[0];
 }
 
-function showCompleted() {
+function showCompleted() : object {
   return todoItems.filter(item => item.done);
 }
 
