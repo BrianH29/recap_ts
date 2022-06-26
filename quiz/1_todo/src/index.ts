@@ -1,11 +1,11 @@
-// let todoItems : Array<object>;
-let todoItems: Todo[];
-
 interface Todo {
   id: number;
   title: string;
   done: boolean;
 }
+
+// let todoItems : Array<object>;
+let todoItems: Todo[];
 
 // api
 function fetchTodoItems(): Todo[] {
